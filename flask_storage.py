@@ -12,6 +12,8 @@ class FlaskSessionStorage(SyncSupportedStorage):
     def set_item(self, key: str, value: str) -> None:
         self.storage[key] = value
 
+        self.storage.modified = True
+
     def remove_item(self, key: str) -> None:
         if key in self.storage:
             self.storage.pop(key, None)
