@@ -250,7 +250,7 @@ def profile():
         GitHub: <input type="text" name="github" value="{github}"><br>
         Portfolio: <input type="text" name="portfolio" value="{portfolio}"><br>
         Professional Summary:<br>
-        <textarea name="professional_summary" rows="4" cols="50">{professional_summary}</textarea><br>
+        <textarea name="professional_summaryy" rows="4" cols="50">{professional_summary}</textarea><br>
         <input type="submit" value="{'Update' if existing_profile else 'Create'} Profile">
     </form>
     {f'<form method="post" action="{url_for("delete_profile")}"><input type="submit" value="Delete Profile"></form>' if existing_profile else ''}
